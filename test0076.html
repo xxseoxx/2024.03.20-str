@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        .container{
+            display: grid;            /*그리드 모양*/
+            grid-gap: 1rem;            /*그리드 사이 갭 지정*/
+            grid-template-columns: repeat(auto-fit, minmax(320px,1fr));   /*확대 축소에 따라 자동지정, 최소320px,최대1fr까지*/
+        }
+        header, figure, p{display: flex; justify-content: center;} /*정보들을 flex박스에 넣고 주축기준 중간 지정*/
+        .card img{width: 100px;} 
+        .card{background-color: white
+        ;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <header>
+                <h3>간장 새우장</h3>
+            </header>
+            <figure>
+                <img src="img/간장새우장.jpg">
+            </figure>
+            <p>간장 새우장 500g 판매 중</p>
+        </div>
+        <div class="card">
+            <header>
+                <h3>새우 감바스</h3>
+            </header>
+            <figure>
+                <img src="img/새우감바스.jpg">
+            </figure>
+            <p>새우 감바스 500g 판매 중</p>
+        </div>
+        <div class="card">
+            <header>
+                <h3>새우구이</h3>
+            </header>
+            <figure>
+                <img src="img/새우구이.jpg">
+            </figure>
+            <p>새우구이 500g 판매 중</p>
+        </div>
+        <div class="card">
+            <header>
+                <h3>새우 머리 버터구이</h3>
+            </header>
+            <figure>
+                <img src="img/새우머리버터구이.jpg">
+            </figure>
+            <p>새우 머리 버터구이 500g 판매 중</p>
+        </div>
+        <div class="card">
+            <header>
+                <h3>새우튀김</h3>
+            </header>
+            <figure>
+                <img src="img/새우튀김.jpg">
+            </figure>
+            <p>새우튀김 500g 판매 중</p>
+        </div>
+        <div class="card">
+            <header>
+                <h3>바나나</h3>
+            </header>
+            <figure>
+                <img src="img/바나나.jpg">
+            </figure>
+            <p>바나나 500g 판매 중</p>
+        </div>
+        <div class="card">
+            <header>
+                <h3>딸기</h3>
+            </header>
+            <figure>
+                <img src="img/딸기.jpg">
+            </figure>
+            <p>딸기 500g 판매 중</p>
+        </div>
+        <div class="card">
+            <header>
+                <h3>수박</h3>
+            </header>
+            <figure>
+                <img src="img/수박.jpg">
+            </figure>
+            <p>수박 500g 판매 중</p>
+        </div>
+    </div>
+</body>
+</html>
