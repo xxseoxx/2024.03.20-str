@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p, span{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <h1>block vs inline</h1>
+    <h2>block</h2>
+    <p>혼자 한 줄 전부차지</p>
+    <p>p tag, div ...</p>
+    <p>컨텐츠 영역만큼 차지</p>
+    <p>button tag, img tag, span...</p>
+    <h2>test</h2>
+    <p>p tag</p>
+    <p>p tag</p>
+    <span>span tag</span>
+    <span>span tag</span>
+    <p style="width: 200px; height: 100px;">p tag 200px;100px</p> <!--스타일 적용 됨-->
+    <p style="width: 200px; height: 100px;">p tag 200px;100px</p>
+    <span style="width: 200px;height: 100px;">span tag 200px;100px</span> <!--스타일 적용 안됨-->
+    <span style="width: 200px;height: 100px;">span tag 200px;100px</span>
+
+    <img style="width: 50px; height: 100px;" src="img/gojo.jpg" alt=""><!--적용 됨-->
+    <img src="img/gojo.jpg" alt="">
+</body>
+</html>
