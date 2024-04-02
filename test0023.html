@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test0023.css">
+    <style>
+        *{
+            margin: 0;
+        }
+            div{color: blue;}
+            div{color:pink;}
+        .cls1{
+            color: red;
+            text-align: center;
+        }
+        #box3{                                 /* 우선순위2*/
+            background-color: aquamarine;
+            text-align: center;
+            /*color:white; */
+        }
+        p{color:brown;}
+        .c1, .c2{color: blue;}
+        /* .c2{color:blue;}*/
+        #grandpa{color:red;}
+    </style>
+</head>
+<body>
+   <div>div1</div>
+   <div class="cls1">div2</div>
+   <div class="cls1" id="box3" style="text-align: right;">div3</div>  <!--우선순위1-->
+   <!--주석-->
+   <h1>브라우저 기본 스타일</h1>
+   hn의 크기, 굵기 등 기본 값
+   <h1>사용자 스타일</h1>
+   <p>인라인(inline) 스타일: html tag에 속성으로 사용</p> <!--우선순위1-->
+   <p>내부 스타일 시트 : tag 밖이고 문서 안 head->style</p> <!--우선순위2-->
+   <p>외부 스타일 시트 : 문서 밖(별도 문서)</p> <!--우선순위3-->
+
+   <div class="c1">c1 글</div>
+   <div class="c2">c2 글</div>
+
+   <p>사용자 스타일(theme) -> 제작자 스타일 -> 브라우저 (기본) 스타일</p>
+
+   <p>!important -> 인라인 -> id 스타일 -> 클래스 스타일 -> 타입 스타일</p>
+   <h1>스타일 상속</h1>
+   <p>배경 색/배경 이미지는 상속 X</p>
+   <span id="grandpa">  <!--아랫 속성까지 적용됨-->
+        할아버지
+        <span>
+             아버지
+             <span>
+                나
+        </span>
+    </span>
+</span>
+</body>
+</html>
