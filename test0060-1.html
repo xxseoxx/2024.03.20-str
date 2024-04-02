@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .prod-title{text-align: center;}
+        .prod-list ul{list-style: none;}
+        .prod-list li{float: left; padding: 20px;  position: relative; }
+        .prod-list li:hover .caption{
+            transform: translateY(-230px); opacity: 1;
+        }
+        .prod-list .caption{width: 300px; height: 200px; opacity: 0.3;
+            background-color: rgba(180, 33, 33, 0.6);  top: 250px;
+        z-index: 10; position: absolute; color: white;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="prod-title">
+            <h2>신상품 목록</h2> 
+        </div>
+        <div class="prod-list">
+            <ul>
+                <li>
+                    <img src="img/prod1.jpg" alt="">
+                    <div class="caption">
+                        <h2>상품1</h2>
+                    <p>상품 1 설명</p>
+                    <p>가격: ~~~원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod2.jpg" alt="">
+                    <div class="caption">
+                        <h2>상품2</h2>
+                    <p>상품 2 설명</p>
+                    <p>가격: ~~~원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod3.jpg" alt="">
+                    <div class="caption">
+                        <h2>상품3</h2>
+                    <p>상품 3 설명</p>
+                    <p>가격: ~~~원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
