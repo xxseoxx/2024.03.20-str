@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #container1{ /*화면 가로 여백을 채움 */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            grid-gap: 20px 30px;
+        }
+        #container2{ /*화면 가로 여백을 채우지 않음 */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+        }
+        .item{height: 200px; border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <div class="item">zzzzz zzzz zzzzz zzzzz zzzz  zzzzz zzzz zzzzz zzzzz zzzz zzzzz zzzzz zzzz zzzzz zzzzz zzzz zzzzz zzzzz zzzz zzzzz zzzzz zzzz zzzzz </div>
+        <div class="item">wwww wwww wwww wwww www wwww wwww wwww wwww wwww wwww wwww </div>
+        <div class="item">kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk </div>
+        <div class="item">asas as asas as asas as asas asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as </div>
+        <div class="item">xdxd xdx xdx xdxd xdxd xdx xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd </div>
+    </div>
+    <div id="container2">
+        <div class="item">zzzzz zzzz zzzzz zzzzz zzzz  zzzzz zzzz zzzzz zzzzz zzzz zzzzz zzzzz zzzz zzzzz zzzzz zzzz zzzzz zzzzz zzzz zzzzz zzzzz zzzz zzzzz </div>
+        <div class="item">wwww wwww wwww wwww www wwww wwww wwww wwww wwww wwww wwww </div>
+        <div class="item">kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk kkk kkkk </div>
+        <div class="item">asas as asas as asas as asas asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as asas as </div>
+        <div class="item">xdxd xdx xdx xdxd xdxd xdx xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd xdxd xdx xdx xdxd </div>
+    </div>
+</body>
+</html>
