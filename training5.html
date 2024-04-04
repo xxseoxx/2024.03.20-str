@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>training 5</h1>
+    <script>
+        var sum =0;
+        var count =0;
+        var min =Infinity;
+        var max =0;
+        
+
+
+        while (1){
+            var num = parseInt(prompt("양수입력:"))
+            
+
+            if (num === 0){
+                var avg = sum / count;
+                document.write(`<p>입력된 값의 평균은 ${avg}, 최소값은 ${min}, 최대값은 ${max}입니다 </p>`)
+                break;
+            }
+
+            if (num > 0){
+                sum += num;
+                count ++;
+                if(num < min) min = num
+                if(num > max) max = num
+            } else {
+                alert("양수만 입력해")
+            }
+
+        }
+
+    </script>
+</body>
+</html>
