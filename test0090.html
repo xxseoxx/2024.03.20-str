@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sumValue = 0;
+        for(var i = 0; i < 6; i++){
+            sumValue = sumValue + i;
+            document.write(`<p>현재 i는 ${i}입니다.</p>`);
+            sumValue = sumValue + i;
+        }
+        document.write(`<p>현재 i는 ${sumValue}입니다.</p>`);
+    </script>
+
+<h1>while 반복문</h1>
+<script>
+    var sumValue = 0;
+    // for(var i = 0; i < 6; i++){
+        var i = 0;
+        while(i < 6){
+        document.write(`<p>현재 i는 ${i}입니다.</p>`);
+        sumValue = sumValue + i;
+        i++
+    }
+    document.write(`<p>현재 i는 ${sumValue}입니다.</p>`);
+</script>
+
+<h1>do-while 반복문</h1>
+<script>
+    var sumVal = 0;
+    var userNumber;
+    do{
+        var userNumber = prompt("자연수를 입력하세요. 마치려면 0을 입력하세요.");
+        userNumber = parseInt(userNumber);
+        sumVal += userNumber;
+    }while(userNumber > 0)
+    document.write(`<p>현재 i는 ${sumVal}입니다.</p>`);
+</script>
+
+<h1>break vs continue</h1>
+<p>멈추는 break, 건너뛰는 continue</p>
+<script>
+    var myCount = 0;
+    var isSick = 0;
+    for(var day = 1; day <= 90; day++){
+        isSick++
+        if(isSick >= 80) break;
+        if(isSick % 10 === 0) continue;
+        myCount++;
+
+    }
+    document.write(`<p>나는 ${myCount}일 참여 했어요.</p>`)
+</script>
+
+<script>
+    var myDayCount = 0;
+    var myTimeCount = 0;
+    for(var day = 1; day <= 90; day++){
+        for(var time = 1; time <= 8; time++){
+            myTimeCount++
+        }
+        myDayCount++;
+    }
+    document.write(`<p>나는 ${myCount}일 
+    ${myTimeCount}시간 참여 했어요.</p>`)
+</script>
+
+<script>
+    // for(var i = 2; i<=9; i++){
+        for(var dan = 2; dan <= 9; dan++){
+        document.write(`<h1>${dan}단</h1>`)
+        // for(var j = 1; j <= 9; j++){
+            for(var gopsu = 1; gopsu <= 9; gopsu++){
+                document.write(`<p>${dan} x ${gopsu} = ${dan*gopsu}</p>`)
+            }
+        }
+</script>
+</body>
+</html>
