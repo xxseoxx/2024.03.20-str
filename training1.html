@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>training 1</h1>
+    <script>
+        var startNumber = parseInt(prompt("시작 정수를 입력하세요."));
+        var finishNumber = parseInt(prompt("종료 정수를 입력하세요."));
+        var sumVal = 0;
+       
+        for(var i =startNumber; i <=finishNumber; i++ ) {
+            sumVal += i; 
+        }
+        document.write(`<p>시작 정수: ${startNumber}</p>`);
+        document.write(`<p>종료 정수: ${finishNumber}</p>`);
+        document.write(`<p>sum of ${startNumber} to ${finishNumber} = ${sumVal}</p>`);
+    </script>
+</body>
+</html>
