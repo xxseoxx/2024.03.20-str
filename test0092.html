@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 1; // 지역 변수
+        b = 1; // 전역 변수
+
+        function calNum(){
+            var sum = 10 + 20;
+            mul = 10 * 20; 
+        }
+        calNum();
+        console.log("mul: ", mul);
+        // 지역 변수 에러 발생: console.log("sum: ", sum);
+
+        // var hoisting 가능
+        // 가상 var varhoisting
+        console.log("varHoist: ",varHoist);
+        var varHoist;
+        var varHoist = "SRY"
+        console.log("varHoist: ",varHoist);
+
+        //global hoist 안되서 에러
+        // console.log("globalHoist: ",globalHoist);
+        // globalHoist = "SRY"
+        // console.log("globalHoist: ",globalHoist);
+
+        var a = 10;
+        console.log("a/2: ", a / 2);
+        var a = "hello";
+        console.log("a/2: ", a / 2);
+        var a = 10;
+        console.log("a/2: ", a / 2);
+
+        var secretNumber="originalServerAddress";
+        var secretNumber="hackersServerAddress";
+
+        // let 재정의 금지(let: 블록{} 범위를 갖음)
+        // let a = 10;
+        // console.log("let a/2: ", a / 2);
+        // let a = "hello";
+        // console.log("let a/2: ", a / 2);
+
+        {
+            let a = 10;
+         console.log("let a/2: ", a / 2);
+         a = 100;
+         console.log("let a/2: ", a / 2);
+        
+        }
+        {
+            let a = "hello";
+         console.log("let a/2: ", a / 2);
+        }
+    </script>
+
+</body>
+</html>
