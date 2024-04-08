@@ -37,8 +37,10 @@
         var a = 10;
         console.log("a/2: ", a / 2);
 
-        var secretNumber="originalServerAddress";
-        var secretNumber="hackersServerAddress";
+
+        // var 재정의 가능
+        var secretAddress="originalServerAddress";
+        var secretAddress="hackersServerAddress";
 
         // let 재정의 금지(let: 블록{} 범위를 갖음)
         // let a = 10;
@@ -57,6 +59,11 @@
             let a = "hello";
          console.log("let a/2: ", a / 2);
         }
+
+        // const 앞에서 정의한 것에 대해 재정의, 재할당 불가
+        const secretAddress2="originalServerAddress";
+        // const secretAddress2="hackersServerAddress";
+        //secretAddress2="hackersServerAddress";
     </script>
 
 </body>
