@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 실습핵심 -->
+    <style>
+        #desc{
+            display: none;  
+        }
+        #open{
+            border: solid rgba(0, 0, 0, 0);
+            background-color: rgba(255, 254, 254, 0.356);
+            position: absolute; bottom: 30px; left: 30px;
+        }
+        #close{
+            background-color: rgba(253, 253, 253, 0.096);
+            border: solid rgba(0, 0, 0, 0.26);
+        }
+        #item{
+            position: relative; width: 300px;
+        }
+        #item img{width: 300px;}
+    </style>
+</head>
+<body>
+    <div id="item">
+       <img src="img/flower.jpg" alt="">
+        <button id="open">상세 설명 보기</button>
+        <div id="desc">
+            <h1>등심 붓꽃</h1>
+            <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 </p>
+            <button id="close" >상세 설명 닫기</button>
+            <button id="test">test</button>
+        </div>
+    </div>
+    <script>
+        // 방법 1
+        let showBtn = document.querySelector("#open");
+        showBtn.onclick = showDetail;
+
+        // 방법 2
+        document.querySelector("#close").onclick = hideDetail;
+
+        // 방법 3
+        document.querySelector("#test").onclick = function(){
+            alert("test");
+        }
+
+
+
+        function showDetail(){
+            document.querySelector("#desc").style.display = 'block';
+            document.querySelector("#open").style.display = 'none';
+        }
+        function hideDetail(){
+            document.querySelector("#desc").style.display = 'none';
+            document.querySelector("#open").style.display = 'block';
+        }
+    </script>
+</body>
+</html>
