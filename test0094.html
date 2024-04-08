@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addNumber(num1, num2){ // num1, num2 : 매개변수
+            let sum = num1 + num2;
+            return sum;
+        }
+        let result = addNumber(2, 3); //2, 3: 인수
+        console.log(result);
+
+        function printMe(name, age, major= "IT"){
+            console.log(`내 이름은 ${name}입니다. 저는 ${age}살 이고, 전공은 ${major}입니다.`);
+        }
+        // printMe(name, age, major);
+        printMe("서재민", 23, "IT");
+        printMe("서재민", 23);
+        printMe("서재민", 23, "음악가");
+
+        function printMe2(name, major= "IT", age){
+            console.log(`내 이름은 ${name}입니다. 저는 ${age}살 이고, 전공은 ${major}입니다.`);
+        }
+        printMe2("서재민", "IT", 23);
+        // 내 이름은 서재민입니다. 저는 23살 이고, 전공은 IT입니다.
+        printMe2("서재민", 23);
+        // 내 이름은 서재민입니다. 저는 undefined살 이고, 전공은 23입니다.
+
+        // function addNumber(num1, num2){ // num1, num2 : 매개변수
+        //     let sum = num1 + num2;
+        //     return sum;
+        // }
+        // let result = addNumber(2, 3); //2, 3: 인수
+        // console.log(result);
+
+         const addNumber2 = function(num1, num2){ // num1, num2 : 매개변수
+            let sum = num1 + num2;
+             return sum;
+         }
+         const result2 = addNumber2(2, 3); //2, 3: 인수
+         console.log(result2);
+
+         (function (){
+            var userName = prompt("이름?");
+            console.log(userName);
+         }());
+
+         const addNumber3 = (num1, num2)=>{
+            let sum = num1 + num2;
+             return sum;
+         }
+
+         const addNumber4= ()=>{
+            let num1 = 1;
+            let num2 = 2;
+            let sum = num1 + num2;
+             return sum;
+         }
+
+        const addNumber5 = ( )=> 1 + 2;
+         
+        const addNumber6= (num1)=>{
+            let num2 = 2;
+            let sum = num1 + num2;
+             return sum;
+         }
+         
+    </script>
+</body>
+</html>
