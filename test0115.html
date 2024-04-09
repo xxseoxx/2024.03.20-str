@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="newjeans" src="img/뉴진스.jpg" alt="">
+    <p id="click"></p>
+    <script>
+        document.getElementById("newjeans").addEventListener('click', (e)=>{
+            document.getElementById("click").innerText = `event type:${e.type}, x좌표:${e.pageX}
+            , y좌표:${e.pageY}`;
+        });
+    </script>
+</body>
+</html>
