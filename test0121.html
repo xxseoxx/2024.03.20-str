@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            display: flex; justify-content: space-between;
+            align-items: center; width: 600px; height: 300px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>이미지 캐러셀 입니다. 좌우 화살표를 눌러 보세요</h1>
+    <div id="container">
+        <div class="arrow" id="left">&lang;</div>
+        <div class="arrow" id="right">&rang;</div>
+    </div>
+
+    <script>
+        const container = document.querySelector("#container");
+        const arrows = document.querySelectorAll(".arrow");
+        const pics = ["img/간장새우장.jpg",
+                      "img/새우감바스.jpg",
+                      "img/새우구이.jpg",
+                      "img/새우머리버터구이.jpg",
+                      "img/새우튀김.jpg"];
+        container.style.backgroundImage = `url(${pics[0]})`;
+        container.style.backgroundSize = 'cover';
+        let i = 0;
+        // for(let i = 0; i < arr.length; i++);
+        arrows.forEach(
+            arrow=>{
+                arrow.addEventListener("click", (event)=>{
+                    if(event.target.id === "left"){// 이전 그림
+                        i--;
+                        if(i < 0){i= pics.length - 1;}  //인덱스 크기 아래로 내려가면 다시 그림이 회전하게끔
+                    }
+                    else if(event.target.id === "right"){// 다음 그림
+                        i++;
+                        if(i >= pics.length){i=0;}  //인덱스 크기 위로 올라가면 다시 그림이 회전하게끔
+                    }
+                    container.style.backgroundImage = `url(${pics[i]})`;
+                })
+            }
+        )
+    </script>
+</body>
+</html>
