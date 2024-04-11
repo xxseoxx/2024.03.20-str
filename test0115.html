@@ -8,11 +8,39 @@
 <body>
     <img id="newjeans" src="img/뉴진스.jpg" alt="">
     <p id="click"></p>
+    <p id="name"></p>
     <script>
         document.getElementById("newjeans").addEventListener('click', (e)=>{
-            document.getElementById("click").innerText = `event type:${e.type}, x좌표:${e.pageX}
+            document.getElementById("click").innerText = 
+            `event type:${e.type}, x좌표:${e.pageX}
             , y좌표:${e.pageY}`;
+            let x = e.pageX; let y = e.pageY;
+            if( (72< x && x < 214) && (106 < y && y < 289)){
+                document.getElementById("name").innerText = "다니엘";
+                location.href = "https://www.instagram.com/danielle.nwjns/?hl=ko"
+            }
+            else if( (267< x && x < 345) && (173 < y && y < 316)){
+                document.getElementById("name").innerText = "해린";
+            }
+            else if( (402< x && x < 474) && (149 < y && y < 293)){
+                document.getElementById("name").innerText = "하니";
+            }
+            else if( (564< x && x < 610) && (86 < y && y < 235)){
+                document.getElementById("name").innerText = "혜인";
+            }
+            else if( (767< x && x < 816) && (94 < y && y < 263)){
+                document.getElementById("name").innerText = "민지";
+            }
+            else{
+                document.getElementById("name").innerText = "멤버를 클릭하세요.";
+            }
+            
         });
+        // (72, 106), (214, 289)
+        // (267, 173), (345, 316)
+        // (402, 149), (474, 293)
+        // (564, 86), (610, 235)
+        // (767, 94), (816, 263)
     </script>
 </body>
 </html>
