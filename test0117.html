@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 입력받은 값 추가해서 보이게하기 -->
+    <!-- this.onclick=''; 한번만 눌리게 하기 -->
+    <h1>DOM에 P를 추가하기</h1>
+    <button onclick="addP(); this.onclick='';">새로운 P추가 하기</button> 
+    <div id="info"></div>
+    <script>
+        function addP(){
+            var newP = document.createElement("p");
+            var txtNode = document.createTextNode("바나나");
+            newP.appendChild(txtNode);
+            document.getElementById("info").appendChild(newP);
+        }
+    </script>
+</body>
+</html>
